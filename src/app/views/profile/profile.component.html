@@ -1,0 +1,54 @@
+<div row align-start content-start>
+  <h5 class="display">Profile</h5>
+</div>
+<div row align-start content-start nowrap style="max-width: 800px;">
+  <div col align-start content-start style="width: 100%;">
+    <form-input
+      placeholder="First Name"
+      label="First Name"
+      [minlength]="4"
+      [maxlength]="32"
+      [required]="true"
+      [(inputValue)]="myprofile.firstname">
+
+    </form-input>
+  </div>
+  <div col align-start content-start style="width: 100%;">
+    <form-input
+      placeholder="Last Name"
+      label="Last Name"
+      [minlength]="4"
+      [maxlength]="32"
+      [required]="true"
+      [(inputValue)]="myprofile.lastname">
+
+    </form-input>
+  </div>
+</div>
+<div row align-start content-start nowrap style="max-width: 800px;">
+  <div col align-start content-start style="width: 100%;">
+    <form-input
+      placeholder="Email"
+      label="Email"
+      [minlength]="8"
+      [maxlength]="256"
+      [required]="true"
+      type="email"
+      [(inputValue)]="myprofile.email">
+
+    </form-input>
+  </div>
+  <div col align-start content-start style="width: 100%;">
+    <form-input
+      placeholder="Last Name"
+      label="Last Name"
+      [minlength]="4"
+      [maxlength]="32"
+      [required]="true"
+      [(inputValue)]="myprofile.lastname">
+
+    </form-input>
+  </div>
+</div>
+
+

@@ -1,0 +1,18 @@
+<app-container>
+  <ui-toolbar [color]="color">
+    <ng-container start *ngIf="width >= 576">
+
+    </ng-container>
+    <ng-container center>
+      <toolbar-title [title]="'Acme Widgets, Inc.'" size="7"></toolbar-title>
+    </ng-container>
+    <ng-container end>
+    </ng-container>
+  </ui-toolbar>
+  <main class="content-container" #maincont>
+    <ui-sidemenu #side [ngClass]="isPortrait ? 'portrait' : 'landscape'"></ui-sidemenu>
+    <article class="article-content" [ngClass]="isPortrait ? 'portrait' : 'landscape'">
+      <router-outlet></router-outlet>
+    </article>
+  </main>
+</app-container>

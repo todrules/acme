@@ -1,0 +1,50 @@
+@function color-error($color-value, $color-name: null) {
+  $error-msg: "The value `#{$color-value}` must be a color.";
+
+  @if ($color-name) {
+    $error-msg: "The map color `#{$color-name}` is not defined. Please make sure the color exists in your `$theme-colors` map.";
+  }
+
+  @error $error-msg;
+
+  @return null;
+}
+
+@function contrastinator($color-value, $cont-color1, $cont-color2) {
+  @if (type-of($color-value) != color) {
+    @return color-error($color-value);
+  }
+  $brightness: (((red($color-value) * .299 + green($color-value) * .587 + blue($color-value) * .114)));
+
+  $contrast1: (((red($cont-color1) * .299 + green($cont-color1) * .587 + blue($cont-color1) * .114)));
+  $contrast2: (((red($cont-color2) * .299 + green($cont-color2) * .587 + blue($cont-color2) * .114)));
+
+  $d1: abs($brightness - $contrast1);
+  $d2: abs($brightness - $contrast2);
+
+  @if ($d1 >= $d2) {
+    @return $cont-color1;
+  } @else {
+    @return $cont-color2;
+  }
+}
+
+@function color-shade($color-value, $amount:0.1) {
+  @if (type-of($color-value) != color) {
+    @return color-error($color-value);
+  }
+  $t: 0;
+  $p: $amount;
+  @if ($amount < 0) {
+    $t: 0;
+    $p: $amount * -1;
+  } @else {
+    $t: 255;
+    $p: $amount;
+  }
+  $R: red($color-value);
+  $G: green($color-value);
+  $B: blue($color-value);
+
+  @return rgb((round(($t - $R) * $p) + $R), (round(($t - $G) * $p) + $G), (round(($t - $B) * $p) + $B));
+}

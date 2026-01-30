@@ -1,0 +1,21 @@
+@import "functions";
+
+@mixin bg-gradient($colorStart, $colorStop) {
+  background-image: -webkit-linear-gradient(45deg, $colorStart 0, $colorStop 100%); /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(45deg, $colorStart 0, $colorStop 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@mixin util-colors($colors) {
+  @each $key, $value in $colors {
+    .text-#{$key} {
+      color: color-shade($value, -0.2);
+    }
+    .bg-#{$key} {
+      background-color: $value;
+    }
+    .grad-#{$key} {
+      background-color: $value;
+      @include bg-gradient(color-shade($value, -0.1), $value);
+    }
+  }
+}

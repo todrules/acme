@@ -1,0 +1,29 @@
+$font-path: '/assets/fonts';
+
+@font-face {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Segoe UI Light"), local("Segoe-UI-Light"), url("#{$font-path}/SegoeUI-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Segoe UI"), local("Segoe-UI-Regular"), url("#{$font-path}/SegoeUI-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Segoe UI Medium"), local("Segoe-UI-Medium"), url("#{$font-path}/SegoeUI-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Segoe UI Bold"), local("Segoe-UI-Bold"), url("#{$font-path}/SegoeUI-SemiBold.ttf") format("truetype");
+}

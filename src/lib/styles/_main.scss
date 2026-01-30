@@ -1,0 +1,18 @@
+@import "imports";
+@import "base";
+@import "typography";
+@import "icons/iconography";
+
+@import "../widgets/widgets";
+
+@include util-colors($colors);
+
+
+body {
+  font-size: $font-size-base;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $text-color;
+  text-align: left;
+  background-color: $bg-color;
+}

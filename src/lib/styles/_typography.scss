@@ -1,0 +1,120 @@
+@import "imports";
+
+h1 {
+  font-family: $headings-font-family;
+  line-height: $h1-line-height;
+  font-size: $h1-font-size;
+  font-weight: calc(var(--headings-font-weight) + 100);
+  margin: 0 0 1rem 0;
+  text-decoration: inherit;
+  text-transform: inherit;
+
+  &.display {
+    font-weight: $headings-font-weight;
+    font-size: calc(#{$h1-font-size} * 2);
+    line-height: calc(#{$h1-line-height} * 2);
+  }
+}
+
+h2 {
+  font-family: $headings-font-family;
+  line-height: $h2-line-height;
+  font-size: $h2-font-size;
+  font-weight: var(--headings-font-weight);
+  margin: 0 0 1rem 0;
+  text-decoration: inherit;
+  text-transform: inherit;
+
+  &.display {
+    font-weight: $headings-font-weight;
+    font-size: calc(#{$h2-font-size} * 2);
+    line-height: calc(#{$h2-line-height} * 2);
+  }
+
+}
+
+h3 {
+  font-family: $headings-font-family;
+  line-height: $h3-line-height;
+  font-size: $h3-font-size;
+  font-weight: var(--headings-font-weight);
+  margin: 0 0 1rem 0;
+  text-decoration: inherit;
+  text-transform: inherit;
+
+  &.display {
+    font-weight: $headings-font-weight;
+    font-size: calc(#{$h3-font-size} * 2);
+    line-height: calc(#{$h3-line-height} * 2);
+  }
+}
+
+h4 {
+  font-family: $headings-font-family;
+  line-height: $h4-line-height;
+  font-size: $h4-font-size;
+  font-weight: var(--headings-font-weight);
+  margin: 0 0 1rem 0;
+  text-decoration: inherit;
+  text-transform: inherit;
+
+  &.display {
+    font-weight: $headings-font-weight;
+    font-size: calc(#{$h4-font-size} * 2);
+    line-height: calc(#{$h4-line-height} * 2);
+  }
+
+}
+
+h5 {
+  font-family: $headings-font-family;
+  line-height: $h5-line-height;
+  font-size: $h5-font-size;
+  font-weight: var(--headings-font-weight);
+  margin: 0 0 0.75rem 0;
+  text-decoration: inherit;
+  text-transform: inherit;
+
+  &.display {
+    font-weight: $headings-font-weight;
+    font-size: calc(#{$h5-font-size} * 2);
+    line-height: calc(#{$h5-line-height} * 2);
+  }
+
+}
+
+h6 {
+  font-family: $headings-font-family;
+  line-height: $h6-line-height;
+  font-size: $h6-font-size;
+  font-weight: var(--headings-font-weight);
+  margin: 0 0 0.5rem 0;
+  text-decoration: inherit;
+  text-transform: inherit;
+
+  &.display {
+    font-weight: $headings-font-weight;
+    font-size: calc(#{$h6-font-size} * 2);
+    line-height: calc(#{$h6-line-height} * 2);
+  }
+
+}
+
+body, p {
+  font-family: $font-family-base;
+  line-height: $line-height;
+  font-size: $font-size-base;
+  font-weight: $font-weight;
+  font-size-adjust: $font-size-root;
+  text-decoration: inherit;
+  text-transform: inherit;
+}
+
+p {
+  margin: 0 0 0.5rem 0;
+
+}
+
+.small {
+  font-size: 75%;
+}

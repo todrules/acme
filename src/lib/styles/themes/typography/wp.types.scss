@@ -1,0 +1,32 @@
+:root {
+  --body-width: calc(100vw);
+  --font-size: calc(9px + var(--body-width) / 300);
+  --line-height: calc(var(--font-size) * 1.2);
+  --font-weight-light: 300;
+  --font-weight-default: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --h1-adjust: calc(var(--font-size) * 2);
+  --h2-adjust: calc(var(--font-size) * 1.75);
+  --h3-adjust: calc(var(--font-size) * 1.5);
+  --h4-adjust: calc(var(--font-size) * 1.25);
+  --h5-adjust: calc(var(--font-size) * 1);
+  --h6-adjust: calc(var(--font-size) * 0.75);
+}
+
+$font-weight: var(--font-weight-default);
+$font-weight-light: var(--font-weight-light);
+$font-weight-bold: var(--font-weight-bold);
+$headings-font-weight: var(--font-weight-bold);
+$font-size-base: var(--font-size);
+$font-size-lg: calc(var(--font-size) * 1.25);
+$font-size-sm: calc(var(--font-size) * 0.75);
+$font-size-root: 100%;
+$line-height: var(--line-height);
+
+$font-family-base: "Segoe UI", "Noto Sans", sans-serif;
+$headings-font-family: "Segoe UI", "Open Sans", "Noto Sans", sans-serif;
+
+@import "fonts/segoe";
+@import "fonts/noto_sans";
+@import "fonts/open_sans";

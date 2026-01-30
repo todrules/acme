@@ -1,0 +1,23 @@
+<div row center-start align-start>
+  <ng-container *ngFor="let theme of myThemes; index as i">
+    <div style="background-color: #fff; padding: 6px; border-radius: 4px; margin: 10px; cursor: pointer;" (click)="setActiveTheme(theme.name)">
+      <div>{{theme.name}}</div>
+      <div row="row" content-start align-start nowrap>
+        <div class="theme-color" [ngStyle]="{'background-color': theme?.colors?.primary || themeDefaults.primary}"></div>
+        <div class="theme-color" [ngStyle]="{'background-color': theme?.colors?.accent || themeDefaults.accent}"></div>
+        <div class="theme-color" [ngStyle]="{'background-color': theme?.colors?.secondary || themeDefaults.secondary}"></div>
+        <div class="theme-color" [ngStyle]="{'background-color': theme?.colors?.warn || themeDefaults.warn}"></div>
+        <div class="theme-color" [ngStyle]="{'background-color': theme?.colors?.danger || themeDefaults.danger}"></div>
+        <div class="theme-color" [ngStyle]="{'background-color': theme?.colors?.info || themeDefaults.info}"></div>
+        <div class="theme-color" [ngStyle]="{'background-color': theme?.colors?.success || themeDefaults.success}"></div>
+        <div class="theme-color" [ngStyle]="{'background-color': theme?.colors?.dark || themeDefaults.dark}"></div>
+        <div class="theme-color" [ngStyle]="{'background-color': theme?.colors?.light || themeDefaults.light}"></div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+<div>
+  <app-button color="accent" [raised]="true">Test</app-button>
+  <app-button color="secondary" [raised]="true">Secondary</app-button>
+</div>
+

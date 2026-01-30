@@ -1,0 +1,30 @@
+<div row content-start align-start style="margin-top: 1vh; max-width: 340px;">
+  <label class="text-primary" [for]="[inputId]" #mylabel>{{ label }}
+    <ng-container *ngIf="required">*</ng-container>
+  </label>
+  <input (focus)="focusInput()"
+         (blur)="blurInput()" #myinput
+         [id]="inputId"
+         [placeholder]="placeholder"
+         [required]="required"
+         [minlength]="minlength"
+         [maxlength]="maxlength"
+         [(ngModel)]="inputValue"
+         (ngModelChange)="onValueChange(inputValue)"
+         style="margin: 0 1vw;"
+         [type]="type"
+         name="inputValue"
+         [ngClass]="{'isvalid': (!status?.invalid && (status?.dirty || status?.touched))}"/>
+  <form-alert [hints]="hints"
+              [warnings]="warnings"
+              [requiredErr]="status?.errors['required']"
+              [emailErr]="status?.errors['email']"
+              [minlengthErr]="status?.errors['minlength']"
+              [maxlengthErr]="status?.errors['maxlength']"
+              [invalid]="status?.invalid"
+              [dirty]="status?.dirty"
+              [touched]="status?.touched"
+              style="width: 100%;">
+
+  </form-alert>
+</div>

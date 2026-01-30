@@ -1,0 +1,63 @@
+@import "../../../styles/imports";
+
+alt-toolbar header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  height: $home-hdr-ht;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  box-shadow: none;
+  border-bottom: 1px solid $border-color;
+  flex-grow: 1;
+  padding: 0.5vh 0.5vw;
+  box-sizing: border-box;
+  background-color: $dark;
+  @include bg-gradient(color-shade($dark, -0.1), color-shade($dark, 0.1));
+  color: $light;
+}
+
+alt-toolbar header section {
+  height: $home-hdr-ht;
+}
+
+alt-toolbar header section[select="[start]"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-grow: 2;
+  vertical-align: center;
+  width: 100%;
+}
+
+alt-toolbar header section[select="[center]"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+alt-toolbar header section[select="[end]"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  flex-grow: 2;
+  width: 100%;
+}
+

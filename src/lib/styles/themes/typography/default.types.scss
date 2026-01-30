@@ -1,0 +1,36 @@
+:root {
+  --body-width: calc(100vmin);
+  --font-size: calc(10px + var(--body-width) / 200);
+  --line-height: calc(var(--font-size) * 1.2);
+  --font-weight-light: 300;
+  --font-weight-default: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  --h1-adjust: 42px;
+  --h2-adjust: 31px;
+  --h3-adjust: 20px;
+  --h4-adjust: 10px;
+  --h5-adjust: 6px;
+  --h6-adjust: 2px;
+}
+
+$font-weight: var(--font-weight-default);
+$font-weight-light: var(--font-weight-light);
+$font-weight-bold: var(--font-weight-bold);
+$headings-font-weight: var(--font-weight-bold);
+$font-size-base: var(--font-size);
+$font-size-lg: calc(var(--font-size) * 1.25);
+$font-size-sm: calc(var(--font-size) * 0.875);
+$font-size-root: 100%;
+$line-height: var(--line-height);
+
+$font-family-base: "Roboto", "Open Sans", "Noto Sans", sans-serif;
+$headings-font-family: "Open Sans", "Noto Sans", sans-serif;
+
+
+@import "fonts/roboto";
+@import "fonts/noto_sans";
+@import "fonts/open_sans";
+
+
+

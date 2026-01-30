@@ -1,0 +1,22 @@
+@import "../../../../styles/imports";
+
+alert-msg.warning span {
+  color: $danger;
+  background: none;
+  border-radius: 3px;
+  margin: 0;
+  margin-right: 2vw;
+  width: auto;
+  font-size: calc(10px + 0.25vmin);
+  padding: 0;
+}
+
+alert-msg.hint span {
+  background: none;
+  border-radius: 3px;
+  margin: 0;
+  margin-left: 2vw;
+  width: auto;
+  font-size: calc(10px + 0.25vmin);
+  padding: 0;
+}

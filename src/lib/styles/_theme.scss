@@ -1,0 +1,51 @@
+// This file imports the font types to be used in the app.
+@import "themes/typography/wp.types";
+
+$default-colors: (
+  primary: #0072C6,
+  secondary: #49306B,
+  accent: #aac24e,
+  info: #00ABEC,
+  success: #89C402,
+  warn: #e1ba2c,
+  danger: #DF3D82,
+  dark: #191E22,
+  light: #f2f2f2
+);
+
+$colors: $default-colors !default;
+
+$primary: map-get($colors, primary) !default;
+$secondary: map-get($colors, secondary) !default;
+$accent: map-get($colors, accent) !default;
+$info: map-get($colors, info) !default;
+$success: map-get($colors, success) !default;
+$warn: map-get($colors, warn) !default;
+$danger: map-get($colors, danger) !default;
+$dark: map-get($colors, dark) !default;
+$light: map-get($colors, light) !default;
+
+$bg-color: $light;
+$text-color: $dark;
+$link-color: $primary;
+
+$preloader-bg: $primary;
+$signup-bg: $accent;
+$login-bg: $primary;
+
+
+$line-height: var(--line-height);
+
+$h1-font-size: calc(var(--h1-adjust));
+$h2-font-size: calc(var(--h2-adjust));
+$h3-font-size: calc(var(--h3-adjust));
+$h4-font-size: calc(var(--h4-adjust));
+$h5-font-size: calc(var(--h5-adjust));
+$h6-font-size: calc(var(--h6-adjust));
+
+$h1-line-height: calc(var(--h1-adjust) * 1.1);
+$h2-line-height: calc(var(--h2-adjust) * 1.1);
+$h3-line-height: calc(var(--h3-adjust) * 1.1);
+$h4-line-height: calc(var(--h4-adjust) * 1.1);
+$h5-line-height: calc(var(--h5-adjust) * 1.1);
+$h6-line-height: calc(var(--h6-adjust) * 1.1);

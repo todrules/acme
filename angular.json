@@ -54,7 +54,16 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/amcharts3/amcharts/amcharts.js",
+              "./node_modules/amcharts3/amcharts/funnel.js",
+              "./node_modules/amcharts3/amcharts/gantt.js",
+              "./node_modules/amcharts3/amcharts/gauge.js",
+              "./node_modules/amcharts3/amcharts/pie.js",
+              "./node_modules/amcharts3/amcharts/radar.js",
+              "./node_modules/amcharts3/amcharts/serial.js",
+              "./node_modules/amcharts3/amcharts/xy.js"
+            ]
           },
           "configurations": {
             "production": {

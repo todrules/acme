@@ -1,0 +1,11 @@
+<header #header row nowrap content-end align-center>
+  <section select="[start]">
+    <ng-content select="[start]"></ng-content>
+  </section>
+  <section select="[center]">
+    <ng-content select="[center]"></ng-content>
+  </section>
+  <section select="[end]" #endsection style="vertical-align: center;">
+    <ng-content select="[end]"></ng-content>
+  </section>
+</header>

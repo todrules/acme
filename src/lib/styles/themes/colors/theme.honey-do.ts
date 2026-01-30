@@ -1,0 +1,10 @@
+export const HoneyDo = {
+  primary: '#052F5F',
+  accent: '#007FFF',
+  secondary: '#4C2A85',
+  warn: '#FFA000',
+  dark: '#0D1321',
+  light: '#f2f2f2'
+};
+
+

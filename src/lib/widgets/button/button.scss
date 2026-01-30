@@ -1,0 +1,179 @@
+@import "../../styles/imports";
+/**
+*	Variables
+**/
+$button-height: 45px;
+$button-horiz-padding: 0.75rem;
+$button-vert-padding: 0.375rem;
+$border-radius: 2px;
+/**
+*	Mixins
+**/
+@mixin button-text() {
+
+  font-family: $font-family-base;
+  line-height: calc(var(--line-height) * 1.25);
+  font-size: calc(var(--font-size));
+  font-weight: var(--font-weight);
+  letter-spacing: 0.04em;
+  margin: inherit;
+  text-decoration: none;
+  text-transform: none;
+
+}
+
+@mixin button-colors() {
+
+  @each $key, $value in $colors {
+
+    button[color="#{$key}"] {
+      background-color: $value;
+      color: contrastinator($value, $dark, $light);
+
+      &:active {
+        outline: none !important;
+        filter: brightness(120%);
+      }
+
+      &:focus {
+        text-decoration: none;
+        outline: none !important;
+        filter: brightness(120%);
+      }
+
+      &:hover {
+        text-decoration: none;
+        cursor: pointer;
+        filter: brightness(120%);
+      }
+    }
+
+    button[contrast="#{$key}"] {
+      background-color: contrastinator($value, color-shade($dark, 0.1), color-shade($light, -0.1));
+      color: $value;
+
+      &:active {
+        outline: none !important;
+        filter: brightness(90%);
+      }
+
+      &:focus {
+        text-decoration: none;
+        outline: none !important;
+        filter: brightness(90%);
+      }
+
+      &:hover {
+        text-decoration: none;
+        cursor: pointer;
+        filter: brightness(90%);
+      }
+    }
+
+    button[outline="#{$key}"] {
+      background-color: contrastinator($value, color-shade($dark, 0.1), color-shade($light, -0.1));
+      color: $value;
+      border: 1px solid $value;
+
+      &:active {
+        outline: none !important;
+        filter: brightness(90%);
+      }
+
+      &:focus {
+        text-decoration: none;
+        outline: none !important;
+        filter: brightness(90%);
+      }
+
+      &:hover {
+        text-decoration: none;
+        cursor: pointer;
+        filter: brightness(90%);
+      }
+    }
+  }
+
+
+}
+/**
+*	Styles
+**/
+button {
+
+  @include button-text();
+
+  min-width: 7vw;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  height: $button-height;
+  border: none;
+  outline: none;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: $border-radius;
+  margin: 0.5vmin;
+  // box-shadow: inset 0 1px 0 rgba($light, .15), 0 1px 1px rgba($dark, .075);
+  padding: $button-vert-padding $button-horiz-padding;
+  transition: 0.3s ease-in-out;
+  filter: brightness(100%);
+
+  &:active {
+    outline: none !important;
+    filter: brightness(120%);
+  }
+
+  &:focus {
+    text-decoration: none;
+    outline: none !important;
+    filter: brightness(120%);
+  }
+
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+    filter: brightness(120%);
+  }
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  &:disabled {
+    color: rgba($text-color, 0.5);
+    filter: opacity(0.7) saturate(30%) grayscale(80%);
+    box-shadow: none;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    background-image: none;
+    // box-shadow: inset 0 3px 5px rgba($dark, 0.125);
+
+    &:focus {
+      //	box-shadow: inset 0 1px 0 rgba($light, .15), 0 1px 1px rgba($dark, .075) inset 0 3px 5px rgba($dark, 0.125);
+    }
+  }
+
+}
+
+
+@include button-colors();
+
+button[raised] {
+
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+
+}

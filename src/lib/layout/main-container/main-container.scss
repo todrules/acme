@@ -1,0 +1,57 @@
+@import "../../styles/imports";
+
+
+main.content-container {
+  width: 100vw;
+  position: absolute;
+  top: $header-height;
+  left: 0;
+  height: $main-height;
+}
+
+article.article-content {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  padding: 2vh 2vw;
+}
+
+article.portrait {
+  width: 100vw;
+  left: 0;
+  height: $dual-height;
+  top: $sidemenu-height;
+  border: none;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+article.landscape {
+  width: $main-width;
+  left: $sidemenu-width;
+  height: $main-height;
+  top: 0;
+  border: none;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+div.sidemenu--portrait {
+  height: $sidemenu-width;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  background-color: color-shade($light, -0.1);
+}
+
+div.sidemenu--landscape {
+  width: $sidemenu-width;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: $main-height;
+  background-color: color-shade($light, -0.1);
+}

@@ -1,0 +1,15 @@
+<ng-container [ngSwitch]="size">
+  <h1 *ngSwitchCase="'1'" #toolbartitle>{{ title }}</h1>
+  <h2 *ngSwitchCase="2" #toolbartitle>{{ title }}</h2>
+  <h3 *ngSwitchCase="3" #toolbartitle>{{ title }}</h3>
+  <h4 *ngSwitchCase="4" #toolbartitle>{{ title }}</h4>
+  <h5 *ngSwitchCase="5" #toolbartitle>{{ title }}</h5>
+  <h6 *ngSwitchCase="6" #toolbartitle>{{ title }}</h6>
+  <h1 class="display" *ngSwitchCase="12" #toolbartitle>{{ title }}</h1>
+  <h2 class="display" *ngSwitchCase="11" #toolbartitle>{{ title }}</h2>
+  <h3 class="display" *ngSwitchCase="10" #toolbartitle>{{ title }}</h3>
+  <h4 class="display" *ngSwitchCase="9" #toolbartitle>{{ title }}</h4>
+  <h5 class="display" *ngSwitchCase="8" #toolbartitle>{{ title }}</h5>
+  <h6 class="display" *ngSwitchCase="7" #toolbartitle>{{ title }}</h6>
+  <h3 style="margin-top: 10px;" *ngSwitchDefault #toolbartitle>{{ title }}</h3>
+</ng-container>

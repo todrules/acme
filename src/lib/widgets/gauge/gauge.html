@@ -1,0 +1,7 @@
+<div class="gauge big" [ngClass]="capClass" #maindiv>
+  <span #cspan>{{ amount }}%</span>
+  <div class="slice">
+    <div class="bar" #bar></div>
+    <div class="fill" #fill></div>
+  </div>
+</div><h5>{{ caption }}</h5>

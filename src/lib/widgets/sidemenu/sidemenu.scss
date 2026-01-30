@@ -1,0 +1,77 @@
+@import "../../styles/imports";
+
+ui-sidemenu {
+  width: $sidemenu-width;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: $main-height;
+
+}
+
+ui-sidemenu.portrait {
+  height: $sidemenu-height;
+  width: 100vw;
+  border: none;
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  margin: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+ui-sidemenu div.button {
+  cursor: pointer;
+}
+
+ui-sidemenu div.button:hover {
+  filter: brightness(60%) saturate(100%);
+}
+
+ui-sidemenu.portrait div.button {
+  max-width: $sidebutton-width;
+  min-width: $sidebutton-width;
+  border-right: 1px solid $border-color;
+  height: $sidemenu-height;
+}
+
+ui-sidemenu.portrait div.button:hover {
+  border-right: 1px solid $border-color;
+}
+
+ui-sidemenu.landscape {
+  width: $sidemenu-width;
+  height: $main-height;
+  border: none;
+  border-right: 1px solid $border-color;
+  display: flex;
+  flex-direction: column !important;
+  flex-wrap: nowrap;
+  margin: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+ui-sidemenu.landscape div.button {
+  max-height: $sidebutton-height;
+  min-height: $sidebutton-height;
+  width: $sidemenu-width;
+  border-bottom: 1px solid $border-color;
+  transition: 0.3s ease-in-out;
+}
+
+ui-sidemenu.landscape div.button:hover {
+  border-bottom: 1px solid $border-color;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3), 0 6px 10px 4px rgba(0,0,0,0.15);
+
+}
+
+
+ui-sidemenu div.button div.label {
+  font-size: $font-size-sm;
+}

@@ -1,0 +1,42 @@
+@import "../../styles/imports";
+
+ui-card, ui-card div {
+  width: 100%;
+  border-radius: $border-radius;
+}
+
+ui-card div[header] {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  padding: 0.5vh 0.5vw;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+ui-card div[content] {
+  display: flex;
+  flex-direction: column !important;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  padding: 0.5vh 0.5vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+ui-card div[footer] {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  padding: 1.25vh 1.25vw;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
+}
